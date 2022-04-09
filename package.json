@@ -1,0 +1,28 @@
+{
+  "name": "videoflix",
+  "version": "1.0.0",
+  "description": "an stream vídeo like netflix",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm start",
+    "server": "node server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianobarbosa1/videoflix.git"
+  },
+  "author": "Adriano Barbosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrianobarbosa1/videoflix/issues"
+  },
+  "homepage": "https://github.com/adrianobarbosa1/videoflix#readme",
+  "devDependencies": {
+    "concurrently": "^7.1.0"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
