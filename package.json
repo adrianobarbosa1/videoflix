@@ -28,6 +28,7 @@
     "express-mongo-sanitize": "^2.2.0",
     "helmet": "^5.0.2",
     "mongoose": "^6.2.10",
+    "passport": "^0.5.2",
     "xss-clean": "^0.1.1"
   }
 }
