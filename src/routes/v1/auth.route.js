@@ -1,12 +1,12 @@
 const express = require('express');
 const passport = require('passport')
 const validate = require('../../middlewares/validate');
-const authValidation = require('../../validations');
-const authController = require('../../controllers');
+const authValidation = require('../../validations/auth.validation');
+const AuthController = require('../../controllers/Auth.controller');
 
 const router = express.Router();
 
-router.post("/signup", validate(authValidation.signUp), authController.signUp);
+router.post("/signup", validate(authValidation.signUp), AuthController.signUp);
 // router.post('/login', validate(authValidation.login), authController.login);
 // router.get('/auth/google',passport.authenticate('google', { session:false, scope:['openid','profile', 'email']}), authController.googleAuth);
 // router.get('/auth/facebook',passport.authenticate('facebook',{ session:false, scope:['email']}), authController.facebookAuth);

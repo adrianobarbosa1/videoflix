@@ -11,8 +11,9 @@ class AuthController {
     try {
       const { name, email, password } = req.body;
 
-      if (await authService.findUserByEmail(email) != null)
+      if (await authService.findUserByEmail(email) != null){
         return next(new ApiError(httpStatus.BAD_REQUEST, 'Um usuário com esse e-mail já existe'));
+      }
 
       const newUser = await authService.signUp(
         name,
@@ -20,9 +21,9 @@ class AuthController {
         password,
         'EMAIL_PASSWORD'
       );
-
+        console.log(newUser)
       const token = tokenUtils.createJwt(newUser._id);
-
+        console.log(token)
       res.status(httpStatus.CREATED).json({
         status: 'SUCCESS',
         data: {
@@ -45,4 +46,4 @@ class AuthController {
   }
 }
 
-export default new AuthController();
+module.exports = new AuthController();

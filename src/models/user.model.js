@@ -58,17 +58,17 @@ userSchema.pre('save', async function (next) {
     next();
 });
 
-userSchema.methods.createPasswordResetToken = async function (this) {
-  const resetToken = await crypto.randomBytes(32).toString('hex');
+// userSchema.methods.createPasswordResetToken = async function (this) {
+//   const resetToken = await crypto.randomBytes(32).toString('hex');
 
-  const expiryTime = new Date();
-  expiryTime.setHours(expiryTime.getHours() + 1);
+//   const expiryTime = new Date();
+//   expiryTime.setHours(expiryTime.getHours() + 1);
 
-  this.passwordResetToken = resetToken;
-  this.passwordResetExpires = expiryTime;
+//   this.passwordResetToken = resetToken;
+//   this.passwordResetExpires = expiryTime;
 
-  return resetToken;
-};
+//   return resetToken;
+// };
 
 const User = mongoose.model('User', userSchema)
 

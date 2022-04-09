@@ -1,4 +1,4 @@
-import User from './../models';
+const User = require('../models/user.model')
 
 class AuthService {
   signUp = async (name, email, password, strategy) => {
@@ -12,4 +12,4 @@ class AuthService {
   }
 }
 
-export default new AuthService();
+module.exports = new AuthService();
