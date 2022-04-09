@@ -21,9 +21,9 @@ class AuthController {
         password,
         'EMAIL_PASSWORD'
       );
-        console.log(newUser)
+
       const token = tokenUtils.createJwt(newUser._id);
-        console.log(token)
+
       res.status(httpStatus.CREATED).json({
         status: 'SUCCESS',
         data: {
@@ -39,7 +39,6 @@ class AuthController {
       });
 
     } catch (e) {
-      console.log(e.message);
       return next(new ApiError(httpStatus.INTERNAL_SERVER_ERROR, 'Ocorreu um erro ao se inscrever'));
     }
 
