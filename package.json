@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/adrianobarbosa1/videoflix#readme",
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.15"
   },
   "dependencies": {
     "express": "^4.17.3"
