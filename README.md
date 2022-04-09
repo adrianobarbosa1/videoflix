@@ -1,4 +1,4 @@
-# videoflix
+# VIDEOFLIX
 
 
 [![Build Status](https://img.shields.io/travis/streamaserver/streama/master.svg?style=for-the-badge)](https://travis-ci.org/streamaserver/streama) 
